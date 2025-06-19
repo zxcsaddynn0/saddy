@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Зелёная Миска — Здоровое питание</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">Зелёная Миска</div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#">Главная</a></li> 
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#order">Заказать</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-slider">
+    <div class="slide fade">
+      <img src="images/hero1.jpg" alt="Блюдо 1">
+      <div class="slide-text">
+        <h1>Полезное питание для здоровой жизни</h1>
+        <p>Наслаждайтесь свежими блюдами, приготовленными с любовью.</p>
+        <a href="#menu" class="btn">Смотреть меню</a>
+      </div>
+    </div>
+    <div class="slide fade">
+      <img src="images/hero2.jpg" alt="Блюдо 2">
+      <div class="slide-text">
+        <h1>Здоровье начинается с еды</h1>
+        <p>Еда без химии и с заботой о вас.</p>
+        <a href="#order" class="btn">Заказать онлайн</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <div class="container">
+      <h2>Наши блюда</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <img src="images/dish1.jpeg" alt="Салат">
+          <h3>Фреш-салат</h3>
+          <p>Свежие овощи и зелень с легким соусом.</p>
+        </div>
+        <div class="card">
+          <img src="images/dish2.jpg" alt="Смузи">
+          <h3>Тропический смузи</h3>
+          <p>Микс экзотических фруктов и йогурта.</p>
+        </div>
+        <div class="card">
+          <img src="images/dish3.jpg" alt="Гречка">
+          <h3>Гречка с овощами</h3>
+          <p>Питательное блюдо с запеченными овощами.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <div class="container">
+      <h2>Оформить заказ</h2>
+      <form action="#" method="post" class="order-form">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Номер телефона" required>
+        <select name="dish" required>
+          <option value="">Выберите блюдо</option>
+          <option value="fresh-salad">Фреш-салат</option>
+          <option value="tropical-smoothie">Тропический смузи</option>
+          <option value="buckwheat">Гречка с овощами</option>
+        </select>
+        <textarea name="comment" placeholder="Комментарий к заказу"></textarea>
+        <button type="submit" class="btn">Отправить заказ</button>
+      </form>
+    </div>
+  </section>
+
+  <footer id="contacts" class="footer">
+    <div class="container">
+      <p>&copy; 2025 ЗелёнаяМиска. Все права защищены.</p>
+      <p>Дубининская ул., 96 | Телефон: +7 (977) 822-78-29</p>
+    </div>
+  </footer>
+
+</body>
+<script>
+  let lastScrollTop = 0;
+
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      header.classList.add('hidden');
+    } else {
+      header.classList.remove('hidden');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+</script>
+</html>
